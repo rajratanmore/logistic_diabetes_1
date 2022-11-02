@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction In Banglore City</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            
+            background-color: rgb(168, 152, 98);
+
+        }
+        table
+        {
+            margin: auto;
+            padding:auto;
+
+        }
+        td {
+            height: 30px;
+            }
+       
+    </style>
+</head>
+
+<body style=>
+
+    <h1 style="color: rgb(65, 24, 131); border: 20px;"> House Price Prediction In Banglore City </h1>
+
+    <form method="POST" action="/prediction_price">
+
+        <table>
+            
+            <tr>
+                <td><label>Area_type:</label></td>
+                <td><select name="area_type">
+                        <option value="Glucose">Glucose</option>
+                        <option value="BloodPressure">BloodPressure</option>
+                        <option value="SkinThickness">SkinThickness</option>
+                        <option value="Insulin">Insulin</option>
+                        <option value="BMI">BMI</option>
+                        <option value="DiabetesPedigreeFunction">DiabetesPedigreeFunction</option>
+                        <option value="Age">Age</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>BHK:</label></td>
+                <td><select name="BHK">
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                        <option value="4">4 BHK</option>
+                        <option value="5">5 BHK</option>
+                        <option value="6">6 BHK</option>
+                        <option value="7">7 BHK</option>
+                        <option value="8">8 BHK</option>
+                        <option value="9">9 BHK</option>
+                        <option value="10">10 BHK</option>
+                        <option value="11">11 BHK</option>
+                        <option value="12">12 BHK</option>
+                        <option value="13">13 BHK</option>
+                        <option value="14">14 BHK</option>
+                        <option value="16">16 BHK</option>
+                        <option value="18">18 BHK</option>
+                        <option value="19">19 BHK</option>
+                        <option value="27">27 BHK</option>
+                        <option value="43">43 BHK</option>
+
+                    </select>
+                </td>
+            </tr>
+
+
+
+            <tr border="1">
+                <td>
+                    <label>Total_sqft:</label>
+                </td>
+    
+                <td>
+                    <input type="text" name="total_sqft"></select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Bath:</label>
+                </td>
+    
+                <td>
+                    <input type="text" name="bath"></select>
+                </td>
+
+            <tr>
+                <td>
+                    <label>Balcony:</label>
+                </td> 
+                <td>
+                    <input type="text" name="balcony">
+                    </select>
+               </td>
+           </tr>
+    
+    
+           
+          <tr>  
+            <td colspan="2">  <input type="submit" value="SUBMIT"></td>
+          
+          </tr>
+            
+    
+        </table>
+    
+        <p>Your Predicted house price will be <b> {{ prediction }} lakhs.</b>  </p>
+
+
+    </form>
+    
+</body>
+
+</html>
